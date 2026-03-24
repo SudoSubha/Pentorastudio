@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PENTORA STUDIO — Full-stack web development, graphic design, photography, and digital marketing. A startup built different.">
+  <title>PENTORA STUDIO — We Build Full-Stack Experiences</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <span class="preloader-counter" id="preloader-counter">0</span>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="navbar-logo" data-page="home">PENTORA STUDIO</a>
+      <div class="navbar-links" id="navLinks">
+        <a href="#" data-page="work">Work</a>
+        <a href="#" data-page="services">Services</a>
+        <a href="#" data-page="team">Team</a>
+        <a href="#" data-page="contact">Contact</a>
+      </div>
+      <button class="nav-mobile-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ======================== HOME PAGE ======================== -->
+  <main class="page active" id="page-home">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow">a startup built different</span>
+          <h1 class="heading-display hero-headline">
+            <span class="line">We Build</span>
+            <span class="line indent"><em>Full-Stack</em></span>
+            <span class="line">Experiences.</span>
+          </h1>
+          <p class="hero-subcopy">We craft end-to-end digital products and creative solutions that scale with your ambition. Strategy. Design. Code. Growth.</p>
+          <div class="hero-buttons">
+            <a href="#" class="btn btn-primary" data-page="work">View Our Work</a>
+            <a href="#" class="btn btn-ghost" data-page="contact">Get in Touch</a>
+          </div>
+        </div>
+        <!-- Rotating Badge -->
+        <svg class="rotating-badge" viewBox="0 0 120 120">
+          <defs>
+            <path id="circlePath" d="M60,60 m-45,0 a45,45 0 1,1 90,0 a45,45 0 1,1 -90,0"/>
+          </defs>
+          <text><textPath href="#circlePath">creative · full-stack · design · marketing · </textPath></text>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee-section">
+      <div class="marquee-track">
+        <span class="marquee-text">WEB DEVELOPMENT · GRAPHIC DESIGN · PHOTOGRAPHY · DIGITAL MARKETING · FULL-STACK · BRAND STRATEGY · </span>
+        <span class="marquee-text">WEB DEVELOPMENT · GRAPHIC DESIGN · PHOTOGRAPHY · DIGITAL MARKETING · FULL-STACK · BRAND STRATEGY · </span>
+        <span class="marquee-text">WEB DEVELOPMENT · GRAPHIC DESIGN · PHOTOGRAPHY · DIGITAL MARKETING · FULL-STACK · BRAND STRATEGY · </span>
+      </div>
+    </div>
+
+    <!-- Services Teaser -->
+    <section class="section reveal">
+      <div class="container">
+        <span class="eyebrow">what we do</span>
+        <h2 class="heading-h2">Every Service Your Brand Needs.</h2>
+        <div class="services-teaser-list">
+          <div class="service-row" data-page="services">
+            <span class="service-index">01</span>
+            <span class="service-name">Full-Stack Web Development</span>
+            <span class="service-desc">End-to-end web solutions from frontend to deployment</span>
+            <span class="service-arrow">→</span>
+          </div>
+          <div class="service-row" data-page="services">
+            <span class="service-index">02</span>
+            <span class="service-name">Graphic Design & Poster Making</span>
+            <span class="service-desc">Visual identities that demand attention</span>
+            <span class="service-arrow">→</span>
+          </div>
+          <div class="service-row" data-page="services">
+            <span class="service-index">03</span>
+            <span class="service-name">Photography & Visual Production</span>
+            <span class="service-desc">Capturing moments with cinematic precision</span>
+            <span class="service-arrow">→</span>
+          </div>
+          <div class="service-row" data-page="services">
+            <span class="service-index">04</span>
+            <span class="service-name">Digital Marketing & Strategy</span>
+            <span class="service-desc">Data-driven growth, measurable results</span>
+            <span class="service-arrow">→</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="section reveal">
+      <div class="container">
+        <div class="why-us">
+          <div>
+            <span class="eyebrow">why choose us</span>
+            <p class="why-us-quote">"We don't just deliver — we obsess."</p>
+          </div>
+          <div>
+            <div class="stat-block reveal reveal-delay-1">
+              <div class="stat-number">5</div>
+              <div class="stat-label">Team Members</div>
+            </div>
+            <div class="stat-block reveal reveal-delay-2">
+              <div class="stat-number">∞</div>
+              <div class="stat-label">Services & Growing</div>
+            </div>
+            <div class="stat-block reveal reveal-delay-3">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Client Ownership</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Preview -->
+    <section class="section reveal">
+      <div class="container">
+        <span class="eyebrow">the minds behind it</span>
+        <h2 class="heading-h2">Our Team</h2>
+        <div class="team-preview-grid">
+          <div class="team-preview-card reveal reveal-delay-1">
+            <div class="team-card-photo" style="background-image:url('images/soumyadip.jpg')"><div class="team-avatar-fallback"></div></div>
+            <div class="team-card-details">
+              <div class="team-name">Soumyadip Das</div>
+              <div class="team-role">Full-Stack Developer</div>
+              <span class="skill-pill">React</span>
+              <span class="skill-pill">PHP</span>
+            </div>
+          </div>
+          <div class="team-preview-card reveal reveal-delay-2">
+            <div class="team-card-photo" style="background-image:url('images/hiranmay_d.jpg')"><div class="team-avatar-fallback"></div></div>
+            <div class="team-card-details">
+              <div class="team-name">Hiranmay Das</div>
+              <div class="team-role">Backend Developer</div>
+              <span class="skill-pill">PHP</span>
+              <span class="skill-pill">MySQL</span>
+            </div>
+          </div>
+          <div class="team-preview-card reveal reveal-delay-3">
+            <div class="team-card-photo" style="background-image:url('images/soumyanil.jpg')"><div class="team-avatar-fallback"></div></div>
+            <div class="team-card-details">
+              <div class="team-name">Soumyanil Biswas</div>
+              <div class="team-role">Frontend & Creative</div>
+              <span class="skill-pill">UI/UX</span>
+              <span class="skill-pill">Design</span>
+            </div>
+          </div>
+          <div class="team-preview-card reveal reveal-delay-4">
+            <div class="team-card-photo" style="background-image:url('images/hiranmay_s.jpg')"><div class="team-avatar-fallback"></div></div>
+            <div class="team-card-details">
+              <div class="team-name">Hiranmay Sarkar</div>
+              <div class="team-role">UI/UX & Visual Design</div>
+              <span class="skill-pill">Figma</span>
+              <span class="skill-pill">Photoshop</span>
+            </div>
+          </div>
+          <div class="team-preview-card reveal reveal-delay-4">
+            <div class="team-card-photo" style="background-image:url('images/sanjay.jpg')"><div class="team-avatar-fallback"></div></div>
+            <div class="team-card-details">
+              <div class="team-name">Sanjay Mandal</div>
+              <div class="team-role">Full-Stack Developer</div>
+              <span class="skill-pill">React</span>
+              <span class="skill-pill">MongoDB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner reveal">
+      <div class="container">
+        <div class="cta-heading">Ready to Build Something?</div>
+        <div class="cta-subheading">Let's talk.</div>
+        <a href="#" class="btn btn-primary" data-page="contact">Start a Project</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pages 2-5 loaded from separate files via JS -->
+  <main class="page" id="page-services"></main>
+  <main class="page" id="page-team"></main>
+  <main class="page" id="page-work"></main>
+  <main class="page" id="page-contact"></main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name">PENTORA STUDIO</div>
+          <div class="footer-tagline">Full-stack creative studio for brands that refuse to blend in.</div>
+        </div>
+        <div class="footer-links">
+          <a href="#" data-page="work">Work</a>
+          <a href="#" data-page="services">Services</a>
+          <a href="#" data-page="team">Team</a>
+          <a href="#" data-page="contact">Contact</a>
+        </div>
+        <div class="footer-social">
+          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 PENTORA STUDIO. All rights reserved.</span>
+        <span>Made with obsession.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="pages.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
