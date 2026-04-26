@@ -34,12 +34,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Scale cursor on hover over interactive elements
     document.addEventListener('mouseover', (e) => {
-        if (e.target.closest('a, button, .service-row, .portfolio-card, .team-card, .team-preview-card, .filter-pill')) {
+        if (e.target.closest('a, button, .service-row, .portfolio-card, .team-card, .team-preview-card, .filter-pill, .package-card, .faq-item')) {
             cursor.style.transform = 'translate(-50%, -50%) scale(1.8)';
         }
     });
     document.addEventListener('mouseout', (e) => {
-        if (e.target.closest('a, button, .service-row, .portfolio-card, .team-card, .team-preview-card, .filter-pill')) {
+        if (e.target.closest('a, button, .service-row, .portfolio-card, .team-card, .team-preview-card, .filter-pill, .package-card, .faq-item')) {
             cursor.style.transform = 'translate(-50%, -50%) scale(1)';
         }
     });
@@ -80,8 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
         window.scrollTo({ top: 0, behavior: 'instant' });
         // Re-init scroll reveals for new content
         initScrollReveal();
-        // Re-init portfolio filter if on work page
-        if (pageName === 'work') initPortfolioFilter();
+        // Re-init FAQ accordion if on packages page
+        if (pageName === 'packages') initFaqAccordion();
     }
 
     // Bind all navigation links
@@ -162,28 +162,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // === Portfolio Filter ===
-    function initPortfolioFilter() {
-        const filterStrip = document.getElementById('filterStrip');
-        const grid = document.getElementById('portfolioGrid');
-        if (!filterStrip || !grid) return;
+    // === FAQ Accordion ===
+    function initFaqAccordion() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        if (!faqItems.length) return;
 
-        filterStrip.addEventListener('click', (e) => {
-            const pill = e.target.closest('.filter-pill');
-            if (!pill) return;
-            const filter = pill.dataset.filter;
-
-            // Update active pill
-            filterStrip.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
-            pill.classList.add('active');
-
-            // Filter cards
-            grid.querySelectorAll('.portfolio-card').forEach(card => {
-                if (filter === 'all' || card.dataset.category === filter) {
-                    card.style.display = '';
-                } else {
-                    card.style.display = 'none';
-                }
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            if (!question) return;
+            // Remove old listener by cloning
+            const newQuestion = question.cloneNode(true);
+            question.parentNode.replaceChild(newQuestion, question);
+            newQuestion.addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+                // Close all
+                faqItems.forEach(i => i.classList.remove('open'));
+                // Toggle current
+                if (!isOpen) item.classList.add('open');
             });
         });
     }

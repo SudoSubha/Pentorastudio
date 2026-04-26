@@ -217,87 +217,250 @@ const PAGE_CONTENT = {
     </section>
   `,
 
-  // ======================== PORTFOLIO PAGE ========================
-  work: `
+  // ======================== PACKAGES PAGE ========================
+  packages: `
     <section class="page-hero">
       <div class="container">
-        <span class="eyebrow">our portfolio</span>
-        <h1 class="heading-h1">Selected Work</h1>
+        <span class="eyebrow">tailored solutions</span>
+        <h1 class="heading-h1">Packages</h1>
+        <p class="subtitle">Tailored solutions for every stage of your brand's journey.</p>
       </div>
     </section>
 
+    <!-- Package Cards -->
     <section class="section" style="padding-top:0">
       <div class="container">
-        <div class="filter-strip" id="filterStrip">
-          <button class="filter-pill active" data-filter="all">All</button>
-          <button class="filter-pill" data-filter="webdev">Web Dev</button>
-          <button class="filter-pill" data-filter="design">Design</button>
-          <button class="filter-pill" data-filter="photography">Photography</button>
-          <button class="filter-pill" data-filter="marketing">Marketing</button>
-        </div>
+        <div class="packages-grid">
 
-        <div class="portfolio-grid" id="portfolioGrid">
-          <div class="portfolio-card reveal" data-category="design">
-            <div class="portfolio-card-image" style="background-image:url('images/work/brand-reimagined.jpg')"><span class="plus-icon">+</span></div>
-            <div class="portfolio-card-overlay">
-              <div class="portfolio-card-overlay-title">Brand Reimagined</div>
-              <div class="portfolio-card-overlay-cat">Design</div>
-              <a href="#" class="portfolio-card-overlay-link" data-page="contact">Contact Us →</a>
+          <!-- Starter -->
+          <div class="package-card reveal">
+            <div class="package-card-header">
+              <span class="package-index">01</span>
+              <h3 class="package-name">Starter</h3>
+              <div class="package-subtitle">Essential Digital Presence</div>
             </div>
-            <div class="portfolio-card-info">
-              <span class="portfolio-card-num">01</span>
-              <span class="portfolio-card-name">Brand Reimagined</span>
+            <p class="package-desc">For small businesses or individuals just getting online.</p>
+            <ul class="package-services">
+              <li class="included"><span class="service-check">✓</span> Full-Stack Web Development</li>
+              <li class="included"><span class="service-check">✓</span> Graphic Design & Poster Making</li>
+              <li class="excluded"><span class="service-cross">✕</span> Photography & Visual Production</li>
+              <li class="excluded"><span class="service-cross">✕</span> Digital Marketing & Strategy</li>
+            </ul>
+            <div class="package-ideal">
+              <span class="ideal-label">Ideal for</span>
+              <p>Local shops, freelancers, early-stage startups who need a solid website + brand visuals to launch with.</p>
             </div>
-          </div>
-          <div class="portfolio-card reveal reveal-delay-1" data-category="webdev">
-            <div class="portfolio-card-image" style="background-image:url('images/work/ecommerce-platform.jpg')"><span class="plus-icon">+</span></div>
-            <div class="portfolio-card-overlay">
-              <div class="portfolio-card-overlay-title">E-Commerce Platform</div>
-              <div class="portfolio-card-overlay-cat">Web Dev</div>
-              <a href="#" class="portfolio-card-overlay-link" data-page="contact">Contact Us →</a>
-            </div>
-            <div class="portfolio-card-info">
-              <span class="portfolio-card-num">02</span>
-              <span class="portfolio-card-name">E-Commerce Platform</span>
+            <div class="package-footer">
+              <span class="package-price">Custom Pricing</span>
+              <a href="#" class="btn btn-primary" data-page="contact">Get Started</a>
             </div>
           </div>
-          <div class="portfolio-card reveal reveal-delay-2" data-category="photography">
-            <div class="portfolio-card-image" style="background-image:url('images/work/product-shoot.jpg')"><span class="plus-icon">+</span></div>
-            <div class="portfolio-card-overlay">
-              <div class="portfolio-card-overlay-title">Product Shoot Series</div>
-              <div class="portfolio-card-overlay-cat">Photography</div>
-              <a href="#" class="portfolio-card-overlay-link" data-page="contact">Contact Us →</a>
+
+          <!-- Creator -->
+          <div class="package-card reveal reveal-delay-1">
+            <div class="package-card-header">
+              <span class="package-index">02</span>
+              <h3 class="package-name">Creator</h3>
+              <div class="package-subtitle">Brand Identity + Visuals</div>
             </div>
-            <div class="portfolio-card-info">
-              <span class="portfolio-card-num">03</span>
-              <span class="portfolio-card-name">Product Shoot Series</span>
+            <p class="package-desc">For brands who already have a website but need to look great.</p>
+            <ul class="package-services">
+              <li class="excluded"><span class="service-cross">✕</span> Full-Stack Web Development</li>
+              <li class="included"><span class="service-check">✓</span> Graphic Design & Poster Making</li>
+              <li class="included"><span class="service-check">✓</span> Photography & Visual Production</li>
+              <li class="excluded"><span class="service-cross">✕</span> Digital Marketing & Strategy</li>
+            </ul>
+            <div class="package-ideal">
+              <span class="ideal-label">Ideal for</span>
+              <p>Existing businesses wanting to refresh their brand — new posters, product shoots, social media assets.</p>
             </div>
-          </div>
-          <div class="portfolio-card reveal reveal-delay-3" data-category="marketing">
-            <div class="portfolio-card-image" style="background-image:url('images/work/social-growth.jpg')"><span class="plus-icon">+</span></div>
-            <div class="portfolio-card-overlay">
-              <div class="portfolio-card-overlay-title">Social Growth Engine</div>
-              <div class="portfolio-card-overlay-cat">Marketing</div>
-              <a href="#" class="portfolio-card-overlay-link" data-page="contact">Contact Us →</a>
-            </div>
-            <div class="portfolio-card-info">
-              <span class="portfolio-card-num">04</span>
-              <span class="portfolio-card-name">Social Growth Engine</span>
-            </div>
-          </div>
-          <div class="portfolio-card reveal reveal-delay-2" data-category="webdev">
-            <div class="portfolio-card-image" style="background-image:url('images/work/portfolio-cms.jpg')"><span class="plus-icon">+</span></div>
-            <div class="portfolio-card-overlay">
-              <div class="portfolio-card-overlay-title">Portfolio CMS</div>
-              <div class="portfolio-card-overlay-cat">Web Dev</div>
-              <a href="#" class="portfolio-card-overlay-link" data-page="contact">Contact Us →</a>
-            </div>
-            <div class="portfolio-card-info">
-              <span class="portfolio-card-num">05</span>
-              <span class="portfolio-card-name">Portfolio CMS</span>
+            <div class="package-footer">
+              <span class="package-price">Custom Pricing</span>
+              <a href="#" class="btn btn-primary" data-page="contact">Get Started</a>
             </div>
           </div>
+
+          <!-- Growth -->
+          <div class="package-card reveal reveal-delay-2">
+            <div class="package-card-header">
+              <span class="package-index">03</span>
+              <h3 class="package-name">Growth</h3>
+              <div class="package-subtitle">Online Presence + Marketing</div>
+            </div>
+            <p class="package-desc">For businesses ready to scale and reach more people.</p>
+            <ul class="package-services">
+              <li class="included"><span class="service-check">✓</span> Full-Stack Web Development</li>
+              <li class="included"><span class="service-check">✓</span> Graphic Design & Poster Making</li>
+              <li class="excluded"><span class="service-cross">✕</span> Photography & Visual Production</li>
+              <li class="included"><span class="service-check">✓</span> Digital Marketing & Strategy</li>
+            </ul>
+            <div class="package-ideal">
+              <span class="ideal-label">Ideal for</span>
+              <p>Brands who want a powerful website, strong visuals, and active marketing campaigns running together.</p>
+            </div>
+            <div class="package-footer">
+              <span class="package-price">Custom Pricing</span>
+              <a href="#" class="btn btn-primary" data-page="contact">Get Started</a>
+            </div>
+          </div>
+
+          <!-- Studio (Premium) -->
+          <div class="package-card package-card-premium reveal reveal-delay-3">
+            <div class="package-premium-badge">Full Service</div>
+            <div class="package-card-header">
+              <span class="package-index">04</span>
+              <h3 class="package-name">Studio</h3>
+              <div class="package-subtitle">Everything, End-to-End</div>
+            </div>
+            <p class="package-desc">For clients who want to hand it all over and see results.</p>
+            <ul class="package-services">
+              <li class="included"><span class="service-check">✓</span> Full-Stack Web Development</li>
+              <li class="included"><span class="service-check">✓</span> Graphic Design & Poster Making</li>
+              <li class="included"><span class="service-check">✓</span> Photography & Visual Production</li>
+              <li class="included"><span class="service-check">✓</span> Digital Marketing & Strategy</li>
+            </ul>
+            <div class="package-ideal">
+              <span class="ideal-label">Ideal for</span>
+              <p>New businesses launching from scratch or established brands doing a complete rebrand — total done-for-you service.</p>
+            </div>
+            <div class="package-footer">
+              <span class="package-price">Custom Pricing</span>
+              <a href="#" class="btn btn-primary btn-premium" data-page="contact">Let's Talk</a>
+            </div>
+          </div>
+
         </div>
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="section comparison-section reveal">
+      <div class="container">
+        <span class="eyebrow">at a glance</span>
+        <h2 class="heading-h2">Package Comparison</h2>
+        <div class="comparison-table-wrap">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Starter</th>
+                <th>Creator</th>
+                <th>Growth</th>
+                <th class="col-premium">Studio</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="row-label">Web Development</td>
+                <td><span class="table-check">✓</span></td>
+                <td><span class="table-cross">✕</span></td>
+                <td><span class="table-check">✓</span></td>
+                <td><span class="table-check">✓</span></td>
+              </tr>
+              <tr>
+                <td class="row-label">Graphic Design</td>
+                <td><span class="table-check">✓</span></td>
+                <td><span class="table-check">✓</span></td>
+                <td><span class="table-check">✓</span></td>
+                <td><span class="table-check">✓</span></td>
+              </tr>
+              <tr>
+                <td class="row-label">Photography</td>
+                <td><span class="table-cross">✕</span></td>
+                <td><span class="table-check">✓</span></td>
+                <td><span class="table-cross">✕</span></td>
+                <td><span class="table-check">✓</span></td>
+              </tr>
+              <tr>
+                <td class="row-label">Digital Marketing</td>
+                <td><span class="table-cross">✕</span></td>
+                <td><span class="table-cross">✕</span></td>
+                <td><span class="table-check">✓</span></td>
+                <td><span class="table-check">✓</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section">
+      <div class="container">
+        <span class="eyebrow">common questions</span>
+        <h2 class="heading-h2">Frequently Asked Questions</h2>
+        <div class="faq-list">
+
+          <div class="faq-item reveal">
+            <button class="faq-question">
+              <span>How do I know which package is right for me?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Start by thinking about where your brand is right now. If you're launching from scratch, Starter or Growth is a great fit. If you already have a website but need visuals and content, go with Creator. And if you want the full experience — website, design, photography, and marketing — Studio is the one. Still unsure? Reach out and we'll help you figure it out.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal reveal-delay-1">
+            <button class="faq-question">
+              <span>Can I customize a package?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Absolutely. Our packages are starting points, not limits. If you need a specific combination of services, we'll build a custom plan tailored to your goals. Just hit the "Let's Talk" button or head to our Contact page.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal reveal-delay-2">
+            <button class="faq-question">
+              <span>How does pricing work?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Every project is unique, so we do custom pricing based on your scope, timeline, and deliverables. After an initial consultation, we'll send you a detailed proposal with transparent pricing — no hidden fees, no surprises.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal reveal-delay-3">
+            <button class="faq-question">
+              <span>What's the typical turnaround time?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>It depends on the package and complexity. A Starter project might take 2–3 weeks, while a full Studio engagement could span 6–8 weeks. We'll always give you a clear timeline upfront.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question">
+              <span>Do you offer ongoing support after the project?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. We offer maintenance and support plans for websites, as well as retainer options for ongoing design, content, and marketing needs. We're not a one-and-done studio — we grow with you.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal reveal-delay-1">
+            <button class="faq-question">
+              <span>What do I need to provide to get started?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Just your vision. We'll guide you through a brief onboarding process where we gather your brand info, goals, references, and any assets you already have. From there, we take the lead.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Custom Packages CTA -->
+    <section class="cta-banner reveal">
+      <div class="container">
+        <div class="cta-heading">Need Something Specific?</div>
+        <div class="cta-subheading">We build custom packages too.</div>
+        <a href="#" class="btn btn-primary" data-page="contact">Let's Talk</a>
       </div>
     </section>
   `,
